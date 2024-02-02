@@ -75,6 +75,7 @@ app.post("/getnews", async(req, res)=>{
         await axios.get("https://hacker-news.firebaseio.com/v0/topstories.json").then((response)=>{
             topstories = response.data.slice(0,90);
         })
+        topstories = topstories.sort((a, b) => b.time - a.time);
         for(const newnumber of topstories){
             let newstory = await News.findOne({newnumber});
             if(!newstory){
