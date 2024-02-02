@@ -49,7 +49,8 @@ app.post("/createaccount", async(req, res)=>{
 
 app.post("/login", async(req, res)=>{
     try{
-        let {username, password} = req.body;
+        let {username, password} = req.body.username;
+        console.log(username);
         let user = await User.findOne({username});
         if(user){
             if(user.password === password){
@@ -68,7 +69,7 @@ app.post("/login", async(req, res)=>{
     }
 });
 
-app.get("/getposts", async(req, res)=>{
+app.post("/getnews", async(req, res)=>{
     try{
         let topstories = []
         await axios.get("https://hacker-news.firebaseio.com/v0/topstories.json").then((response)=>{
@@ -90,7 +91,7 @@ app.get("/getposts", async(req, res)=>{
                 break;
             }
         }
-        let {username} = req.body;
+        let username = req.body.username;
         let {p} = req.query;
         if(!username){
             const news = await News.find({}).sort({date: -1}).skip((p-1)*30).limit(30);
@@ -98,7 +99,7 @@ app.get("/getposts", async(req, res)=>{
         }
         else{
             const avoidnews = await User.find({username}).select("avoidnews");
-            const news = await News.find({newnumber: {$nin: avoidnews.avoidnews}}).sort({date: -1}).skip((p-1)*30).limit(30);
+            const news = await News.find({newnumber: {$nin: avoidnews[0].avoidnews}}).sort({date: -1}).skip((p-1)*30).limit(30);
             res.json({success:true, news: news});
         }
     }
@@ -114,12 +115,13 @@ app.post("/hidenews",async(req,res)=>{
         if(!username || !newnumber){
             res.json({success:false, message: "Please provide all the details"});
         }
-        let {p} = req.query;
+        // let {p} = req.query;
         const avoidnews = await User.findOneAndUpdate({username}, {$push: {avoidnews: newnumber}},{new: true});
-        const news = await News.find({newnumber: {$nin: avoidnews.avoidnews}}).sort({date: -1}).skip((p-1)*30).limit(30);
-        res.json({success:true, news: news});
+        // const news = await News.find({newnumber: {$nin: avoidnews.avoidnews}}).sort({date: -1}).skip((p-1)*30).limit(30);
+        res.json({success:true});
     }
     catch(err){
+        console.log(err);
         res.json({success:false, message: "It's not you, it's us"});
     }
 })
