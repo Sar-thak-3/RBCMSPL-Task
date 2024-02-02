@@ -23,7 +23,7 @@ const Newsdata = ({}) => {
 
   const getnews = async () => {
     setNewsdata([]);
-    const response = await fetch(`http://localhost:5000/getnews?p=${page}`, {
+    const response = await fetch(`https://rbcmspl-backend.vercel.app/getnews?p=${page}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
