@@ -71,7 +71,7 @@ This project is a clone of the Combinator news website, developed as part of the
 
 ### Deployed Links
 
-- **Frontend Deployment:** [(https://rbcmspl-task.vercel.app/)]((https://rbcmspl-task.vercel.app/))
+- **Frontend Deployment:** [(https://rbcmspl-task.vercel.app/)](https://rbcmspl-task.vercel.app/)
 - **Backend Deployment:** [(https://rbcmspl-backend.vercel.app/)](https://rbcmspl-backend.vercel.app/)
 
 
