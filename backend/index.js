@@ -125,3 +125,7 @@ app.post("/hidenews",async(req,res)=>{
         res.json({success:false, message: "It's not you, it's us"});
     }
 })
+
+app.use((req,res)=>{
+    res.send("All good");
+})
