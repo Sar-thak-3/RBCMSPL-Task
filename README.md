@@ -10,7 +10,7 @@ This project is a clone of the Combinator news website, developed as part of the
 
 - **Frontend:** React JS
 - **Backend:** Node JS
-- **Database:** Not specified
+- **Database:** MongoDB Atlas
 
 ### Setup Instructions
 
@@ -68,6 +68,12 @@ This project is a clone of the Combinator news website, developed as part of the
 1. Visit the application in your web browser (usually at http://localhost:3000) after starting the React JS server.
 
 2. Use the provided APIs for login, creating a new account, fetching news, and hiding news items.
+
+### Deployed Links
+
+- **Frontend Deployment:** [(https://rbcmspl-task.vercel.app/)]((https://rbcmspl-task.vercel.app/))
+- **Backend Deployment:** [(https://rbcmspl-backend.vercel.app/)](https://rbcmspl-backend.vercel.app/)
+
 
 ### Note
 
