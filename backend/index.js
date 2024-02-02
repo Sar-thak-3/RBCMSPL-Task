@@ -88,6 +88,9 @@ app.post("/getnews", async(req, res)=>{
                 
                 });
             }
+            else{
+                break;
+            }
         }
         let username = req.body.username;
         let {p} = req.query;
