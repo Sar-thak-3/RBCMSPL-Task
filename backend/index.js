@@ -49,7 +49,7 @@ app.post("/createaccount", async(req, res)=>{
 
 app.post("/login", async(req, res)=>{
     try{
-        let {username, password} = req.body.username;
+        let {username, password} = req.body;
         console.log(username);
         let user = await User.findOne({username});
         if(user){
