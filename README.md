@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# RBCMSPL Assignment - SDE Intern Position
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Combinator News Website Clone
 
-## Available Scripts
+### Description
 
-In the project directory, you can run:
+This project is a clone of the Combinator news website, developed as part of the SDE intern assignment for RBCMSPL. The clone replicates all the properties of the original website, including user authentication, account creation, adding new news items, pagination, and the ability to hide news items.
 
-### `npm start`
+### Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React JS
+- **Backend:** Node JS
+- **Database:** Not specified
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Setup Instructions
 
-### `npm test`
+1. Clone the repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone <repository_url>
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd <project_directory>
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install frontend dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+4. Start the React JS application:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm run start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Navigate to the backend directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd backend
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. Install backend dependencies:
 
-## Learn More
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. Start the Node JS server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    node index
+    ```
 
-### Code Splitting
+### APIs Created
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `/login`: Handles user authentication.
+- `/createnewaccount`: Creates a new user account.
+- `/getnews`: Checks whether the user is logged in and displays news accordingly in reverse chronological order.
+- `/hidenews`: Allows users to hide news items.
 
-### Analyzing the Bundle Size
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Visit the application in your web browser (usually at http://localhost:3000) after starting the React JS server.
 
-### Making a Progressive Web App
+2. Use the provided APIs for login, creating a new account, fetching news, and hiding news items.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Note
 
-### Advanced Configuration
+Ensure that you have Node JS and npm installed on your system before running the application. The backend server should be running on a different port (default is http://localhost:5000) to avoid conflicts with the React JS development server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to explore and enhance the project as needed for evaluation.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding!
