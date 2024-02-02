@@ -68,7 +68,7 @@ const Newsdata = ({}) => {
 
   const handleHide = async (event) => {
     console.log(event.target.id);
-    let response = await fetch(`http://localhost:5000/hidenews`,{
+    let response = await fetch(`https://rbcmspl-backend.vercel.app/hidenews`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json",

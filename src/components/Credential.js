@@ -12,7 +12,7 @@ const Credential = ({}) => {
   const [username, setUsername] = useState("");
 
   const handleCreateAccount = async() => {
-    let response = await fetch("http://localhost:5000/createaccount", {
+    let response = await fetch("https://rbcmspl-backend.vercel.app/createaccount", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Credential = ({}) => {
   }
 
   const handleLogin = async() => {
-    let response = await fetch("http://localhost:5000/login", {
+    let response = await fetch("https://rbcmspl-backend.vercel.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
