@@ -120,6 +120,24 @@ In MongoDB Atlas, two collections are created to store user and news data:
      - `newsnumber` (String, Unique)
      - `date` (Number)
 
+## Why Store News IDs Instead of Entire News
+
+The decision to store only news IDs instead of the entire news content is based on several considerations:
+
+1. **Space Efficiency:**
+   - Storing entire news articles, especially if they are large, can consume a significant amount of database space. By storing only the news IDs, the storage requirements are minimized, leading to more efficient use of resources.
+
+2. **Real-time Data Updates:**
+   - News articles are often fetched in real-time through open APIs. Storing the entire news content would require constant updates to keep the data current. By storing only the news IDs, the app can retrieve the latest information directly from the API, eliminating the need for frequent updates to stored news content.
+
+3. **Reduced Processing Time:**
+   - Fetching and storing entire news articles involves additional processing time, impacting the overall performance of the application. Storing news IDs allows the app to quickly retrieve the relevant information from the API without the need for extensive data processing.
+
+4. **Resource Optimization:**
+   - For apps that primarily rely on real-time data from external sources, storing only identifiers (such as news IDs) and fetching the content as needed can optimize resource usage and improve overall system responsiveness.
+
+Adopting this approach, aims to maintain an efficient and scalable database structure while providing users with the most up-to-date news information without unnecessary data duplication.
+
 ### Usage
 
 1. Visit the application in your web browser (usually at http://localhost:3000) after starting the React JS server.
