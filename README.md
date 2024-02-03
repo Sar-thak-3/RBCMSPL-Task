@@ -1,6 +1,8 @@
 # RBCMSPL Assignment - SDE Intern Position
 
 ## Combinator News Website Clone
+![image](https://github.com/Sar-thak-3/RBCMSPL-Task/assets/100359818/00ce2207-a7b4-49fe-8f29-b880552ae158)
+
 
 ### Description
 
